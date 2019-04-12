@@ -1,0 +1,39 @@
+# v0.72
+
+## Bugs
+
+- [134] query_all changed to be non-recursive due to recursion limit being
+  hit for large result sets.
+
+# v0.71
+
+## Features
+
+- [131] Added the ability to pass custom headers through to requests
+
+# v0.70
+
+## Features
+
+- [98] Requests session objects are now shared between SFType instances and
+  the parent Salesforce object
+
+# v0.69
+
+## Features
+
+- [103] Require requests[secure] to allow for system openssl, which will allow
+  for TLSv1.2 in Python < 2.7.9 assuming system openssl is newer than Python's.
+
+## Other
+
+- Replaced httpretty with responses for unit tests due to SSL-related errors
+  in httpretty.
+
+# v0.68.2
+
+## Other
+
+- [85] Added tox support, updated travis-ci config
+- Added CHANGES file
+- [97] \_call_salesforce is now used consistently across API
